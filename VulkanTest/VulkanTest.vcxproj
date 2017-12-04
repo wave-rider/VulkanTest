@@ -23,7 +23,7 @@
     <ProjectGuid>{176D5A34-D2A2-4880-9804-FCFFA0328DDB}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>VulkanTest</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
