@@ -1,11 +1,8 @@
-
-VulkanTest/x64/Debug/VulkanTest.tlog/VulkanTest.lastbuildstate
-VulkanTest/x64/Debug/VulkanTest.tlog/unsuccessfulbuild
-VulkanTest/x64/Debug/VulkanTest.tlog/CL.write.1.tlog
-VulkanTest/x64/Debug/VulkanTest.tlog/CL.read.1.tlog
-VulkanTest/x64/Debug/VulkanTest.tlog/CL.command.1.tlog
+VulkanTest/x64/Debug/**
 *.log
 *.pdb
 *.idb
-.vs/VulkanTest/v15/.suo
-.vs/VulkanTest/v15/Browse.VC.db
+.vs/**
+lib/**
+x64/Debug/VulkanTest.exe
+x64/Debug/VulkanTest.ilk
