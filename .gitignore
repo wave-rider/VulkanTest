@@ -4,5 +4,4 @@ VulkanTest/x64/Debug/**
 *.idb
 .vs/**
 lib/**
-x64/Debug/VulkanTest.exe
-x64/Debug/VulkanTest.ilk
+x64/Debug/**
