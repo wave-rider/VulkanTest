@@ -5,3 +5,5 @@ VulkanTest/x64/Debug/**
 .vs/**
 lib/**
 x64/Debug/**
+x64/Release/**
+VulkanTest/x64/Release/**
