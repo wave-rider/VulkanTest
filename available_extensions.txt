@@ -6,3 +6,17 @@ available extensions:
         VK_KHR_external_memory_capabilities
         VK_KHR_external_semaphore_capabilities
         VK_EXT_debug_report
+        
+NVIDIA GEFORCE GTX 1060
+available extensions:
+        VK_EXT_debug_report
+        VK_EXT_display_surface_counter
+        VK_KHR_get_physical_device_properties2
+        VK_KHR_get_surface_capabilities2
+        VK_KHR_surface
+        VK_KHR_win32_surface
+        VK_KHX_device_group_creation
+        VK_KHR_external_fence_capabilities
+        VK_KHR_external_memory_capabilities
+        VK_KHR_external_semaphore_capabilities
+        VK_NV_external_memory_capabilities
