@@ -79,8 +79,6 @@ private:
 		vkEnumerateInstanceExtensionProperties(nullptr, &extensionCount, nullptr);
 
 		std::vector<VkExtensionProperties> extensions(extensionCount);
-
-		
 		vkEnumerateInstanceExtensionProperties(nullptr, &extensionCount, extensions.data());
 
 		
@@ -88,6 +86,24 @@ private:
 
 		for (const auto& extension : extensions) {
 			std::cout << "\t" << extension.extensionName << std::endl;
+		}
+
+		pickPhysicalDevice();
+	}
+
+	void pickPhysicalDevice()
+	{
+		VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
+
+		// Listing the graphics cards is very similar to listing extensions and starts with querying just the number.
+
+		uint32_t deviceCount = 0;
+		vkEnumeratePhysicalDevices(instance, &deviceCount, nullptr);
+
+		//If there are 0 devices with Vulkan support then there is no point going further.
+
+		if (deviceCount == 0) {
+			throw std::runtime_error("failed to find GPUs with Vulkan support!");
 		}
 
 	}
