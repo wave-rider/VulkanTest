@@ -1,0 +1,8 @@
+Radeon RX 580
+available extensions:
+        VK_KHR_surface
+        VK_KHR_win32_surface
+        VK_KHR_get_physical_device_properties2
+        VK_KHR_external_memory_capabilities
+        VK_KHR_external_semaphore_capabilities
+        VK_EXT_debug_report
