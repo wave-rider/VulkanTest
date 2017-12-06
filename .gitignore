@@ -5,3 +5,4 @@ VulkanTest/x64/Debug/**
 .vs/**
 lib/**
 x64/Debug/**
+*.user
