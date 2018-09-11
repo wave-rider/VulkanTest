@@ -3,7 +3,7 @@ CC=gcc
 CFLAGS=-lglfw -lstdc++ -lvulkan
 
 
-all:		numberextensions listextensions
+all:		numberextensions listextensions pickphysicaldevice
 
 
 numberextensions:		
@@ -12,3 +12,7 @@ numberextensions:
 
 listextensions:		
 		$(CC) $(CFLAGS) -o listextensions listextensions.cpp
+
+
+pickphysicaldevice:		
+		$(CC) $(CFLAGS) -o pickphysicaldevice pickphysicaldevice.cpp
