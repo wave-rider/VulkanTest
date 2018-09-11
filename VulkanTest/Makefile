@@ -3,7 +3,7 @@ CC=gcc
 CFLAGS=-lglfw -lstdc++ -lvulkan
 
 
-all:		numberextensions listextensions pickphysicaldevice
+all:		numberextensions listextensions pickphysicaldevice triangle
 
 
 numberextensions:		
@@ -16,3 +16,15 @@ listextensions:
 
 pickphysicaldevice:		
 		$(CC) $(CFLAGS) -o pickphysicaldevice pickphysicaldevice.cpp
+
+
+triangle:		triangleshader triangleprogram
+
+
+triangleshader:		
+		glslangValidator -V -o shaders/vert.spv shaders/shader.vert
+		glslangValidator -V -o shaders/frag.spv shaders/shader.frag
+
+
+triangleprogram:		
+		$(CC) $(CFLAGS) -o draw_triangle draw_triangle.cpp
