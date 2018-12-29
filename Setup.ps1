@@ -1,4 +1,4 @@
-﻿Add-Type -assembly "system.io.compression.filesystem"
+﻿﻿Add-Type -assembly "system.io.compression.filesystem"
 $url = "https://github.com/glfw/glfw/releases/download/3.2.1/glfw-3.2.1.bin.WIN64.zip"
 $output = "lib\glfw-3.2.1.bin.WIN64.zip"
 $start_time = Get-Date
@@ -29,5 +29,7 @@ if ((Test-Path "lib\glm") -eq $false)
 	[io.compression.zipfile]::ExtractToDirectory($output, "lib")
 }
 
+Set-Location -Path "VulkanTest\shaders"
+.\compile.bat
 
 Write-Output "Time taken: $((Get-Date).Subtract($start_time).Seconds) second(s)"
