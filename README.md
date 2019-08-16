@@ -1,7 +1,7 @@
 # VulkanTest
 Run setup.bat to download and unpack GLFW and GLM libraries
 
-Download Vulkan sdk from hete https://vulkan.lunarg.com/sdk/home#windows
+Download Vulkan sdk from here: https://vulkan.lunarg.com/sdk/home#windows
 
 Install it manually into C:\VulkanSDK
 
