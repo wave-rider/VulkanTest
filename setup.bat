@@ -1,1 +1,1 @@
- Powershell.exe -ExecutionPolicy Bypass .\Setup.ps1
+Powershell.exe -ExecutionPolicy Bypass .\Setup.ps1
