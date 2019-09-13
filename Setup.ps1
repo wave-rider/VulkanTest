@@ -34,14 +34,14 @@ if ((Test-Path "lib\glm") -eq $false)
    Expand-Archive -LiteralPath $output -DestinationPath "lib"
 }
 
-$vulkanPath = Get-ChildItem -Path "C:\VulkanSDK"
+$vulkanPath = Get-ChildItem -Path "C:\VulkanSDK"  | sort LastWriteTime | select -last 1
 if ($vulkanPath -And  (Test-Path $vulkanPath.FullName))
 {
    $currentLocation = Get-Location
    $vcprojLocation = Join-Path -Path $currentLocation -ChildPath "VulkanTest\VulkanTest.vcxproj"
    Write-Host "Project is located at " $vcprojLocation
    Write-Host "SDK location "$vulkanPath.FullName
-   ((Get-Content -path $vcprojLocation) -replace "C:\\VulkanSDK\\1.0.65.0",$vulkanPath.FullName) | Set-Content -Path $vcprojLocation
+   ((Get-Content -path $vcprojLocation) -replace "C:\\VulkanSDK\\1.1.114.0",$vulkanPath.FullName) | Set-Content -Path $vcprojLocation
    Write-Host "Vulkan is installed into " $vulkanPath
    Set-Location -Path "VulkanTest\shaders"
    .\compile.bat
