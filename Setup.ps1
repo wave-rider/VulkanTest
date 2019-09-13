@@ -41,7 +41,7 @@ if ($vulkanPath -And  (Test-Path $vulkanPath.FullName))
    $vcprojLocation = Join-Path -Path $currentLocation -ChildPath "VulkanTest\VulkanTest.vcxproj"
    Write-Host "Project is located at " $vcprojLocation
    Write-Host "SDK location "$vulkanPath.FullName
-   ((Get-Content -path $vcprojLocation) -replace "C:\\VulkanSDK\\1.1.114.0",$vulkanPath.FullName) | Set-Content -Path $vcprojLocation
+   ((Get-Content -path $vcprojLocation) -replace "C:\\VulkanSDK\\([\.0-9]{1,})", $vulkanPath.FullName) | Set-Content -Path $vcprojLocation
    Write-Host "Vulkan is installed into " $vulkanPath
    Set-Location -Path "VulkanTest\shaders"
    .\compile.bat
