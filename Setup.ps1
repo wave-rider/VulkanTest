@@ -19,8 +19,8 @@ if ((Test-Path "lib\glfw-3.3.2.bin.WIN64") -eq $false)
    Expand-Archive -LiteralPath $output -DestinationPath "lib"
 }
 
-$url = "https://github.com/g-truc/glm/releases/download/0.9.8.5/glm-0.9.8.5.zip"
-$output = "lib\glm-0.9.8.5.zip"
+$url = "https://github.com/g-truc/glm/releases/download/0.9.9.8/glm-0.9.9.8.zip"
+$output = "lib\glm-0.9.9.8.zip"
 if ((Test-Path $output) -eq $false)
 { 
   Invoke-WebRequest -Uri $url -OutFile $output
