@@ -1,5 +1,5 @@
-﻿$url = "https://github.com/glfw/glfw/releases/download/3.2.1/glfw-3.2.1.bin.WIN64.zip"
-$output = "lib\glfw-3.2.1.bin.WIN64.zip"
+﻿$url = "https://github.com/glfw/glfw/releases/download/3.3.2/glfw-3.3.2.bin.WIN64.zip"
+$output = "lib\glfw-3.3.2.bin.WIN64.zip"
 $start_time = Get-Date
 if ((Test-Path "lib") -eq $false)
 {
@@ -14,7 +14,7 @@ else {
    Write-Host "glfw is installed"
 }
 
-if ((Test-Path "lib\glfw-3.2.1.bin.WIN64") -eq $false)
+if ((Test-Path "lib\glfw-3.3.2.bin.WIN64") -eq $false)
 {
    Expand-Archive -LiteralPath $output -DestinationPath "lib"
 }
