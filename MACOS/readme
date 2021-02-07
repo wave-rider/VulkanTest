@@ -2,51 +2,33 @@ Vulkan setup on mac
 Credits: dokipen
 https://www.youtube.com/watch?v=oxVPdnie8sA&feature=emb_logo
 
-Download XCode
-Install the xcode command line tools
-Download sdk
+1) Download XCode
+2) Install the xcode command line tools ->  xcode-select --install
+3) Download sdk from https://vulkan.lunarg.com/sdk/home#mac
+Unzip sdk into $HOME/Documents/vulkansdk
 Extract it somewhere same and somewhere it isn’t going to be changed. 
-Install textmate -> menu->terminal->install
-Set up environment variables in your ‘mate ~/.bash_profile’
 
-export VULKAN_ROOT_LOCATON="$HOME/Documents/Projects/"
-export VULKAN_SDK_VERSION="1.1.73.0"
-export VULKAN_SDK="$VULKAN_ROOT_LOCATON/vulkansdk-macos-$VULKAN_SDK_VERSION/macOS"
-export VK_ICD_FILENAMES="$VULKAN_SDK/etc/vulkan/icd.d/MoltenVK_icd.json"
-export VK_LAYER_PATH="$VULKAN_SDK/etc/vulkan/explicit_layers.d" 
+4) Install textmate -> menu->terminal->install
+5) Set up environment variables in your ‘mate ~/.bash_profile’
+
+export VULKAN_SDK="$HOME/Documents/vulkansdk/macOS"
+export VK_ICD_FILENAMES="$VULKAN_SDK/share/vulkan/icd.d/MoltenVK_icd.json"
+export VK_LAYER_PATH="$VULKAN_SDK/share/vulkan/explicit_layers.d" 
 export PATH="/usr/local/opt/python/libexec/bin:$VULKAN_SDK/bin:$PATH"
 
-...where VULKAN_ROOT_LOCATION is the place where you extracted the folder.
-
 6) source ~/.bash_profile 
-7) install brew.
+7) install brew and glfw
 brew install glfw --HEAD
 brew install cmake
 
-8 ) Create following cmake script CMakelists.txt and put it in same folder as source file main.cpp
+8 ) cd MACOS
+9) mkdir build 
+10) cd build
+9) cmake ..
+10) make
+11) ./vulkanHelloWorld
 
-##########################################################################
-
-project(vulkanHelloWorld)
-cmake_minimum_required(VERSION 3.10)
-
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -std=c++11  " )
-
-add_executable(${PROJECT_NAME} main.cpp)
-
-find_package(Vulkan REQUIRED)
-find_package(glfw3 3.3 REQUIRED)
-
-if (VULKAN_FOUND)
-    message(STATUS "Found Vulkan, Including and Linking now")
-    include_directories(${Vulkan_INCLUDE_DIRS})
-    target_link_libraries (${PROJECT_NAME} ${Vulkan_LIBRARIES} glfw)
-endif (VULKAN_FOUND)
-
-###########################################################################
-
-9) run cmake & make
-10) OPTIONAL QtCreator
+12) OPTIONAL QtCreator
 
 DYLD_LIBRARY_PATH /Users/dokipen/Documents/Projects/vulkansdk-macos-1.1.73.0/macOS/lib
 
