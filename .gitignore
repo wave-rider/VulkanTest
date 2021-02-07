@@ -9,3 +9,4 @@ x64/Release/**
 VulkanTest/x64/Release/**
 VulkanTest/shaders/frag.spv
 VulkanTest/shaders/vert.spv
+MACOS/build/**
