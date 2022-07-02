@@ -19,7 +19,7 @@
     <None Include="shaders\vert.spv" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="listextensions.cpp">
+    <ClCompile Include="hello_triangle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
